@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Bootslander Bootstrap Template</title>
+  <title>Masjid Al-Bakrie</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
   <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <link href="{{ asset('depan/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('depan/img/logo2.png') }}" rel="icon">
   <link href="{{ asset('depan/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -45,7 +45,7 @@
 
       <a href="{{ url('/') }}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ asset ('depan/img/logo.png') }}" alt="">
+        <img src="{{ asset ('depan/img/logo1.png') }}" alt="">
         <h1 class="sitename">Masjid Al-Bakrie</h1>
       </a>
 
