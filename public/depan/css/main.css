@@ -21,8 +21,8 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #040677; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #1acc8d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #091c3a; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #085c44; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,11 +30,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #085c44; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #1acc8d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #085c44; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #08005e;
+  --background-color: #08005e00;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #0c0091;
@@ -163,7 +163,7 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 25px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
@@ -176,7 +176,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #10058c;
+  --background-color: #091c3a;
 }
 
 /*--------------------------------------------------------------
@@ -445,7 +445,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #091c3a;
   font-size: 14px;
   position: relative;
 }
@@ -800,12 +800,12 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: 1; 
 }
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 10%);
+  /* background: color-mix(in srgb, var(--background-color), transparent 10%); */
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -814,6 +814,58 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.hero-image-wrapper img {
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image-wrapper .main-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-image-wrapper .overlay-img {
+  position: absolute;
+  top: 50px;
+  left: -70px;
+  width: 70%;
+  z-index: 2;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+
+/* Overlay */
+.hero-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(9, 28, 58, 0.4); /* transparansi 40% */
+  border-radius: 10px;
+  pointer-events: none; /* supaya tidak ganggu klik */
+}
+
+@media (max-width: 768px) {
+  .hero-image-wrapper .overlay-img {
+    left: 10%;
+    /* top: 90px; */
+    transform: translateX(-50%);
+    width: 80%;
+  }
 }
 
 .hero h1 {
@@ -832,7 +884,7 @@ section,
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 5px 0 30px 0;
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -859,13 +911,14 @@ section,
 .hero .btn-watch-video {
   font-size: 16px;
   transition: 0.5s;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   color: var(--default-color);
   font-weight: 600;
 }
 
 .hero .btn-watch-video i {
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
+  color: #085c44;
   font-size: 32px;
   transition: 0.3s;
   line-height: 0;
@@ -998,6 +1051,13 @@ section,
 .about .content p:last-child {
   margin-bottom: 0;
 }
+
+.icon-box p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  /* text-align: center; */
+}
+
 
 .about .content .read-more {
   background: var(--accent-color);
@@ -1166,6 +1226,20 @@ section,
   font-size: 16px;
 }
 
+.floating {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Details Section
 --------------------------------------------------------------*/
@@ -1229,6 +1303,32 @@ section,
 .gallery .gallery-item:hover img {
   transform: scale(1.1);
 }
+
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination {
+  color: #085c44;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #085c44;
+}
+
+
+@media (max-width: 768px) {
+  .gallery .swiper-slide .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+  .gallery .gallery-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -1607,13 +1707,21 @@ section,
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-item .faq-content {
+/* .faq .faq-container .faq-item .faq-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
+} */
+
+.faq .faq-container .faq-item .faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
 }
+
 
 .faq .faq-container .faq-item .faq-content p {
   margin-bottom: 0;
@@ -1648,17 +1756,26 @@ section,
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-active .faq-content {
+/* .faq .faq-container .faq-active .faq-content {
   grid-template-rows: 1fr;
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
+} */
+
+.faq .faq-container .faq-active .faq-content {
+  max-height: 1000px; /* cukup besar untuk semua isi */
+  opacity: 1;
+  padding-top: 10px;
 }
+
 
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
   color: var(--accent-color);
 }
+
+
 
 /*--------------------------------------------------------------
 # Contact Section

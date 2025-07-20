@@ -182,4 +182,107 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  // Gallery Desktop Swiper
+  const swiperDesktop = new Swiper('.gallerySwiper', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.gallery-next-desktop',
+      prevEl: '.gallery-prev-desktop',
+    },
+    pagination: {
+      el: '.gallery-pagination-desktop',
+      clickable: true,
+    },
+  });
+
+  // Gallery Mobile Swiper
+  const swiperMobile = new Swiper('.gallerySwiperMobile', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.gallery-next-mobile',
+      prevEl: '.gallery-prev-mobile',
+    },
+    pagination: {
+      el: '.gallery-pagination-mobile',
+      clickable: true,
+    },
+  });
+
+  // JADWAL SHOLAT
+  async function showJadwalSholat() {
+    try {
+      const response = await fetch('/jadwal-sholat');
+      const data = await response.json();
+
+      if (data.status && data.data) {
+        const jadwal = data.data.jadwal;
+        const lokasi = data.data.lokasi;
+        const tanggal = data.data.tanggal;
+        document.getElementById("lokasi-jadwal").innerText = `Lokasi: ${lokasi}`;
+
+        const waktuKeys = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
+        const labelMap = {
+          Fajr: 'Subuh',
+          Dhuhr: 'Dzuhur',
+          Asr: 'Ashar',
+          Maghrib: 'Maghrib',
+          Isha: 'Isya'
+        };
+
+        const wrapper = document.getElementById("jadwal-sholat-wrapper");
+        wrapper.innerHTML = "";
+
+        waktuKeys.forEach(key => {
+          const waktuLabel = labelMap[key];
+          let waktuSholat = jadwal[key].replace('.', ':');
+          let waktuSholatDate = new Date(`${tanggal}T${waktuSholat}`);
+          const now = new Date();
+
+          // Penyesuaian hari jika waktu sudah lewat lebih dari 5 jam
+          let diff = (waktuSholatDate - now) / 60000;
+          if (diff < -300) waktuSholatDate.setDate(waktuSholatDate.getDate() + 1);
+          diff = (waktuSholatDate - now) / 60000;
+
+          const countdown = diff > 0
+            ? `(${Math.floor(diff / 60)} jam ${Math.floor(diff % 60)} menit lagi)`
+            : "(Sudah lewat)";
+
+          wrapper.insertAdjacentHTML("beforeend", `
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h3>${waktuLabel}</h3>
+                <h4>${waktuSholat}</h4>
+                <p>${countdown}</p>
+              </div>
+            </div>
+          `);
+        });
+
+        // Inisialisasi atau reset swiper
+        if (window.jadwalSwiper?.destroy) window.jadwalSwiper.destroy(true, true);
+
+        window.jadwalSwiper = new Swiper('.jadwalSholatSwiper', {
+          loop: true,
+          speed: 500,
+          autoplay: { delay: 5000 },
+          slidesPerView: 1,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          }
+        });
+      } else {
+        console.error("Gagal mendapatkan data:", data.message);
+        document.getElementById("jadwal-sholat-wrapper").innerHTML =
+          `<div class="swiper-slide"><div class="testimonial-item"><p>Gagal memuat jadwal.</p></div></div>`;
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+      document.getElementById("jadwal-sholat-wrapper").innerHTML =
+        `<div class="swiper-slide"><div class="testimonial-item"><p>Silakan periksa koneksi atau izinkan lokasi.</p></div></div>`;
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", showJadwalSholat);
+
 })();
