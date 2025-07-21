@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
 
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
   <!-- Favicons -->
   <!-- <link href="assets/img/favicon.png" rel="icon"> -->
   <link href="{{ asset('depan/img/logo2.png') }}" rel="icon">
