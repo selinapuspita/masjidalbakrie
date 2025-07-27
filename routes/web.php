@@ -2,14 +2,15 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\JadwalSholatController;
+use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Carbon\Carbon;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [HomeController::class, 'index']);
+
 
 Route::get('/jadwal-sholat', [App\Http\Controllers\JadwalSholatController::class, 'get']);
 
@@ -24,3 +25,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('galleries', GaleriController::class);
+});

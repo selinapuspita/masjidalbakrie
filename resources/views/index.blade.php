@@ -52,7 +52,7 @@
 
       <a href="{{ url('/') }}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ asset ('depan/img/logo2.png') }}" alt="">
+        <img src="{{ asset ('depan/img/logo1.png') }}" alt="">
         <h1 class="sitename">Masjid Al-Bakrie</h1>
       </a>
 
@@ -197,19 +197,19 @@
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="features-item">
               <i class="bi bi-droplet-half" style="color: #e80368;"></i>
-              <h3><a href="#fasilitas" class="glightbox" data-gallery="fasilitas" class="stretched-link">Ruang Wudhu Pria</a></h3>
+              <h3><a href="{{ asset('depan/img/fasilitas/rwudhupria.png') }}" class="glightbox" data-gallery="fasilitas" class="stretched-link">Ruang Wudhu Pria</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
             <div class="features-item">
               <i class="bi bi-droplet" style="color: #e361ff;"></i>
-              <h3><a href="#fasilitas" class="glightbox" data-gallery="fasilitas" class="stretched-link">Ruang Wudhu Wanita</a></h3>
+              <h3><a href="{{ asset('depan/img/fasilitas/rwudhuwanita.png') }}" class="glightbox" data-gallery="fasilitas" class="stretched-link">Ruang Wudhu Wanita</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
             <div class="features-item">
               <i class="bi bi-universal-access" style="color: #47aeff;"></i> 
-              <h3><a href="#fasilitas" class="glightbox" data-gallery="fasilitas" class="stretched-link">Akses Disabilitas</a></h3>
+              <h3><a href="{{ asset('depan/img/fasilitas/disabilitas.png') }}" class="glightbox" data-gallery="fasilitas" class="stretched-link">Akses Disabilitas</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
@@ -221,7 +221,7 @@
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
             <div class="features-item">
               <i class="bi bi-megaphone" style="color: #11dbcf;"></i>
-              <h3><a href="#fasilitas" class="glightbox" data-gallery="fasilitas" class="stretched-link">Papan Pengumuman</a></h3>
+              <h3><a href="{{ asset('depan/img/fasilitas/pengumuman.png') }}" class="glightbox" data-gallery="fasilitas" class="stretched-link">Papan Pengumuman</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
@@ -233,13 +233,13 @@
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
             <div class="features-item">
               <i class="bi bi-people-fill" style="color: #b2904f;"></i>
-              <h3><a href="#fasilitas" class="glightbox" data-gallery="fasilitas" class="stretched-link">Aula Serbaguna</a></h3>
+              <h3><a href="{{ asset('depan/img/fasilitas/aula.png') }}" class="glightbox" data-gallery="fasilitas" class="stretched-link">Aula Serbaguna</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
             <div class="features-item">
               <i class="bi bi-book-fill" style="color: #b20969;"></i>
-              <h3><a href="#fasilitas" class="glightbox" data-gallery="fasilitas" class="stretched-link">Ruang TK/TPA</a></h3>
+              <h3><a href="{{ asset('depan/img/fasilitas/tk.png') }}" class="glightbox" data-gallery="fasilitas" class="stretched-link">Ruang TK/TPA</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
@@ -319,39 +319,24 @@
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      @php
-        $images = [
-          ['file' => 'gallery-1.jpg', 'title' => 'Buka Puasa Bersama', 'desc' => 'Kegiatan Ramadhan bersama warga sekitar'],
-          ['file' => 'gallery-2.jpg', 'title' => 'Kegiatan Donor Darah', 'desc' => 'Kerja sama dengan PMI Kota Bogor'],
-          ['file' => 'gallery-3.jpg', 'title' => 'Kajian Malam Jumat', 'desc' => 'Kajian rutin setiap pekan'],
-          ['file' => 'gallery-4.jpg', 'title' => 'Peringatan Maulid', 'desc' => 'Maulid Nabi Muhammad SAW'],
-          ['file' => 'gallery-5.jpg', 'title' => 'I’tikaf', 'desc' => 'Malam penuh ibadah di 10 malam terakhir'],
-          ['file' => 'gallery-6.jpg', 'title' => 'Santunan Yatim', 'desc' => 'Berbagi kasih bersama anak-anak yatim'],
-          ['file' => 'gallery-7.jpg', 'title' => 'Qurban Idul Adha', 'desc' => 'Penyembelihan hewan qurban'],
-          ['file' => 'gallery-8.jpg', 'title' => 'Pengajian Muslimah', 'desc' => 'Kajian rutin untuk ibu-ibu'],
-          ['file' => 'gallery-9.jpg', 'title' => 'Gotong Royong', 'desc' => 'Bersih-bersih masjid bersama warga'],
-          
-        ];
-      @endphp
-
+      <!-- Desktop Swiper (8 images per slide) -->
       <div class="position-relative d-none d-md-block">
         <div class="swiper gallerySwiper">
           <div class="swiper-wrapper">
-            @foreach(array_chunk($images, 8) as $chunk)
+            @foreach($images->chunk(8) as $chunk)
               <div class="swiper-slide">
-                <div class="row g-0">
+                <div class="row g-3">
                   @foreach($chunk as $img)
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-6">
                       <div class="gallery-item">
                         <a 
-                          href="{{ asset('depan/img/gallery/' . $img['file']) }}"
+                          href="{{ asset('storage/' . $img->file) }}"
                           class="glightbox"
                           data-gallery="images-gallery"
-                          data-title="{{ $img['title'] }}"
-                          data-description="{{ $img['desc'] }}"
+                          data-title="{{ $img->title }}"
+                          data-description="{{ $img->desc }}"
                         >
-                          <img src="{{ asset('depan/img/gallery/' . $img['file']) }}" class="img-fluid" alt="{{ $img['title'] }}">
+                          <img src="{{ asset('storage/' . $img->file) }}" class="img-fluid" alt="{{ $img->title }}">
                         </a>
                       </div>
                     </div>
@@ -366,6 +351,7 @@
         </div>
       </div>
 
+
       <!-- Mobile Swiper (1 image per slide) -->
       <div class="position-relative d-block d-md-none mt-4">
         <div class="swiper gallerySwiperMobile d-block d-md-none mt-4">
@@ -374,13 +360,13 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <a 
-                    href="{{ asset('depan/img/gallery/' . $img['file']) }}"
+                    href="{{ asset('storage/' . $img->file) }}"
                     class="glightbox"
                     data-gallery="images-gallery"
-                    data-title="{{ $img['title'] }}"
-                    data-description="{{ $img['desc'] }}"
+                    data-title="{{ $img->title }}"
+                    data-description="{{ $img->desc }}"
                   >
-                    <img src="{{ asset('depan/img/gallery/' . $img['file']) }}" class="img-fluid" alt="{{ $img['title'] }}">
+                    <img src="{{ asset('storage/' . $img->file) }}" class="img-fluid" alt="{{ $img->title }}">
                   </a>
                 </div>
               </div>
@@ -586,16 +572,14 @@
 
   </main>
 
-  <footer id="kontak" class="footer dark-background">
+  <footer id="kontak" class="footer dark-background" style="background-image: url('{{ asset('depan/img/hero-bg.jpg') }}'); background-size: cover; background-position: center;">
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-12 col-md-12 footer-about text-center">
           <div class="footer-hadith mb-3">
             <p class="text-white small fst-italic">
               <i class="bi bi-quote me-1"></i>
-              Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain.
-              <!-- <i class="bi bi-quote me-2"></i> -->
-              <br>
+              Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain.<br>
               <span class="d-block mt-1">– HR. Ahmad</span>
             </p>
           </div>
@@ -606,7 +590,6 @@
             <p>Komplek Rasuna Epicentrum</p>
             <p>Jl. HR. Rasuna Said, Kuningan, Setiabudi, Jakarta Selatan, DKI Jakarta, 12960</p>
             <p class="mt-3"><strong>Phone:</strong> <span>021-80868277</span></p>
-            <!-- <p><strong>Email:</strong> <span>info@example.com</span></p> -->
           </div>
           <div class="social-links d-flex justify-content-center mt-4">
             <a href="https://web.facebook.com/masjidalbakrie.tamanrasuna.9/?_rdc=1&_rdr#" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -618,12 +601,9 @@
 
     <div class="container copyright text-center mt-4">
       <p>© {{ date('Y') }} <span>Copyright | </span> <strong class="px-1 sitename">Masjid Al Bakrie | </strong> <span>All Rights Reserved</span></p>
-      <!-- <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
-      </div> -->
     </div>
-
   </footer>
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
