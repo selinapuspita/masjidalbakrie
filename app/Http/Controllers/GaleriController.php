@@ -13,7 +13,9 @@ class GaleriController extends Controller
         $galleries = Galeri::when($search, function ($query, $search) {
             return $query->where('title', 'like', '%' . $search . '%')
                         ->orWhere('desc', 'like', '%' . $search . '%');
-        })->paginate(6); // Ganti jumlah per halaman sesuai kebutuhan
+        })
+        ->orderBy('created_at', 'desc')
+        ->paginate(6);
 
         return view('galleries.index', compact('galleries', 'search'));
     }

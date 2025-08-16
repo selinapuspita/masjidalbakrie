@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\JadwalSholatController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
@@ -28,4 +29,8 @@ require __DIR__.'/auth.php';
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('galleries', GaleriController::class);
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('kegiatan', KegiatanController::class);
 });

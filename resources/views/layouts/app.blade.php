@@ -8,7 +8,7 @@
         <title>{{ config('app.name', 'Masjid Al Bakrie') }}</title>
 
         <!-- favicon -->
-        <link rel="icon" type="image/png" href="{{ asset('depan/img/logo2.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('depan/img/logo-albakrie.png') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

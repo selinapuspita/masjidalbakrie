@@ -208,6 +208,7 @@
     },
   });
 
+
   // JADWAL SHOLAT
   async function showJadwalSholat() {
     try {
@@ -284,5 +285,59 @@
   }
 
   document.addEventListener("DOMContentLoaded", showJadwalSholat);
+
+
+
+  // Kalender Masehi
+  const masehiElem = document.getElementById('kalender-masehi');
+  if (masehiElem) {
+    const today = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    masehiElem.innerText = today.toLocaleDateString('id-ID', options);
+  }
+
+  // Kalender Hijriyah
+  const hijriFormatter = new Intl.DateTimeFormat('en-TN-u-ca-islamic', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
+  const hijriDate = hijriFormatter.format(new Date());
+  const [day, monthEn, year] = hijriDate.split(' ');
+
+  const bulanHijriyah = {
+    Muharram: "Muharam",
+    Safar: "Safar",
+    "Rabiʻ I": "Rabiul Awal",
+    "Rabiʻ II": "Rabiul Akhir",
+    "Jumada I": "Jumadil Awal",
+    "Jumada II": "Jumadil Akhir",
+    Rajab: "Rajab",
+    Shaʻban: "Syaban",
+    Ramadan: "Ramadan",
+    Shawwal: "Syawal",
+    "Dhuʻl-Qiʻdah": "Zulkaidah",
+    "Dhuʻl-Hijjah": "Zulhijah"
+  };
+
+  const bulanID = bulanHijriyah[monthEn] || monthEn;
+  const tanggalHijriyahID = `${day} ${bulanID} ${year} H`;
+
+  const dateLabel = document.getElementById('kalender-hijriyah');
+  if (dateLabel) {
+    dateLabel.innerText = `(${tanggalHijriyahID})`;
+  }
+
+  const hijriYear = year;
+  const embed = document.querySelector('#kalender-modal embed');
+  if (embed) {
+    embed.src = `/depan/kalender/kalender-${hijriYear}H.pdf`;
+  }
+
+  const pdfLink = document.getElementById('kalender-link');
+  if (pdfLink) {
+    pdfLink.innerText = `Lihat Kalender ${hijriYear}H`;
+  }
+
 
 })();

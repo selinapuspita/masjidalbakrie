@@ -21,7 +21,7 @@
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
             <div>
                 <a href="/">
-                    <img src="{{ asset('depan/img/logo1.png') }}" alt="Logo" class="w-48 mx-auto mb-4">
+                    <img src="{{ asset('depan/img/logo-albakrie.png') }}" alt="Logo" class="w-48 mx-auto mb-4">
                 </a>
                 
             </div>

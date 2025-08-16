@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('depan/img/logo1.png') }}" alt="Logo" class="w-12 mx-auto">
+                        <img src="{{ asset('depan/img/logo-albakrie.png') }}" alt="Logo" class="w-12 mx-auto">
                     </a>
                 </div>
 

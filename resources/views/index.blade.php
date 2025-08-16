@@ -12,7 +12,7 @@
 
   <!-- Favicons -->
   <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <link href="{{ asset('depan/img/logo2.png') }}" rel="icon">
+  <link href="{{ asset('depan/img/logo-albakrie.png') }}" rel="icon">
   <link href="{{ asset('depan/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 
@@ -52,7 +52,7 @@
 
       <a href="{{ url('/') }}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ asset ('depan/img/logo1.png') }}" alt="">
+        <img src="{{ asset ('depan/img/logoputih.png') }}" alt="">
         <h1 class="sitename">Masjid Al-Bakrie</h1>
       </a>
 
@@ -60,8 +60,8 @@
         <ul>
           <li><a href="/" class="active">Beranda</a></li>
           <li><a href="#tentangkami">Tentang Kami</a></li>
-          <li><a href="#fasilitas">Fasilitas</a></li>
           <li><a href="#kegiatan">Kegiatan</a></li>
+          <li><a href="#fasilitas">Fasilitas</a></li>
           <li><a href="#galeri">Galeri</a></li>
           <li><a href="#jadwalsholat">Jadwal Sholat</a></li>
           <li><a href="#kontak">Kontak</a></li>
@@ -76,20 +76,27 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-      <img src="{{ asset('depan/img/hero-bg.jpg') }}" alt="" class="hero-bg">
+      <!-- <img src="{{ asset('depan/img/hero-bg.jpg') }}" alt="" class="hero-bg"> -->
+      <img src="{{ asset('depan/img/heromasjid3.png') }}" alt="" class="hero-bg">
+
       <div class="container">
-        <div class="row gy-4 justify-content-between">
-          <div class="col-lg-4 order-lg-last hero-img hero-image-wrapper position-relative" data-aos="zoom-out" data-aos-delay="100">
+        <div class="row gy-4 justify-content-end">
+          <!-- <div class="col-lg-4 order-lg-last hero-img hero-image-wrapper position-relative" data-aos="zoom-out" data-aos-delay="100">
             <img src="{{ asset('depan/img/hero-img-mosque1.png') }}" class="img-fluid animated main-img" alt="Masjid 1">
             <img src="{{ asset('depan/img/hero-img-mosque2.jpeg') }}" class="img-fluid animated overlay-img" alt="Masjid 2">
-          </div>
-          <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
-            <h3>اِنَّمَا يَعْمُرُ مَسٰجِدَ اللّٰهِ مَنْ اٰمَنَ بِاللّٰهِ وَالْيَوْمِ الْاٰخِرِ وَاَقَامَ الصَّلٰوةَ وَاٰتَى الزَّكٰوةَ وَلَمْ يَخْشَ اِلَّا اللّٰهَۗ فَعَسٰٓى اُولٰۤىِٕكَ اَنْ يَّكُوْنُوْا مِنَ الْمُهْتَدِيْنَ</h3>
+          </div> -->
+          <div class="col-lg-6  d-flex flex-column justify-content-end align-items-end text-end" data-aos="fade-in">
+            <h3 dir="rtl" class="tracking-wider text-2xl leading-relaxed text-right isolate">اِنَّمَا يَعْمُرُ مَسٰجِدَ اللّٰهِ مَنْ اٰمَنَ بِاللّٰهِ وَالْيَوْمِ الْاٰخِرِ وَاَقَامَ الصَّلٰوةَ وَاٰتَى الزَّكٰوةَ وَلَمْ يَخْشَ اِلَّا اللّٰهَۗ فَعَسٰٓى اُولٰۤىِٕكَ اَنْ يَّكُوْنُوْا مِنَ الْمُهْتَدِيْنَ</h3>
             <p>Sesungguhnya yang (pantas) memakmurkan masjid-masjid Allah hanyalah orang yang beriman kepada Allah dan hari Akhir, mendirikan salat, menunaikan zakat, serta tidak takut (kepada siapa pun) selain Allah. Mereka itulah yang diharapkan termasuk golongan orang-orang yang mendapat petunjuk.</p>
             <p>QS.At - Taubah Ayat 18</p>
             <div class="d-flex">
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                <a href="https://www.youtube.com/watch?v=LgcxbgILGY8"
+                  class="glightbox btn-watch-video d-flex align-items-center transition-all duration-300 ease-in-out hover:scale-105 hover:bg-white hover:text-blue-900 hover:shadow-lg">
+                  <i class="bi bi-play-circle me-2"></i>
+                  <span>Lihat Video</span>
+                </a>
             </div>
+
           </div>
         </div>
       </div>
@@ -109,69 +116,240 @@
       </svg>
     </section>
 
-
     <!-- Tentang Section -->
     <section id="tentangkami" class="about section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-xl-center gy-5">
 
-          <div class="col-xl-5 content">
-            <h3>Tentang Masjid Al-Bakrie</h3>
-            <h2>Sejarah Singkat</h2>
-            <p style="text-align: justify;">
-              Masjid Al-Bakrie diresmikan pada tanggal 23 Februari 2004, dibangun di atas lahan milik Pemerintah Provinsi DKI Jakarta seluas 3.200 m². Diresmikan oleh Bapak Aburizal Bakrie bersama para tokoh dan masyarakat, masjid ini hadir sebagai pusat ibadah dan aktivitas sosial bagi warga sekitar dan lingkungan Bakrie Group.
-              Dengan arsitektur yang terinspirasi dari gaya Masjid Medan dan prinsip desain islami, masjid ini memiliki luas bangunan 1.458 m² dan mampu menampung lebih dari 2.000 jamaah.
-            </p>
-            <!-- <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
-          </div>
+          <div class="col-xl-12 content">
 
-          <div class="col-xl-7">
+            <div class="row">
+
+              <div id="poster-masjid" class="col-md-4 testimonials">
+                <div class="container text-white" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row justify-content-center">
+                        <div class="text-center">
+                            <div class="poster-wrapper">
+                                <img id="poster-image" 
+                                    src="{{ $upcomingKegiatan && $upcomingKegiatan->gambar ? asset('storage/' . $upcomingKegiatan->gambar) : asset('depan/img/poster-masjid.jpeg') }}" 
+                                    alt="{{ $upcomingKegiatan && $upcomingKegiatan->gambar ? $upcomingKegiatan->kegiatan : 'Poster Masjid Al-Bakrie' }}"
+                                    class="poster-image">
+                            </div>
+                            <!-- Radio Navigation -->
+                            <div class="mt-4 flex justify-center space-x-4 flex-nowrap">
+                                <label class="flex items-center whitespace-nowrap">
+                                    <input type="radio" name="poster-nav" value="previous" 
+                                          {{ $previousKegiatan ? '' : 'disabled' }} 
+                                          {{ !$upcomingKegiatan && $previousKegiatan ? 'checked' : '' }}
+                                          onchange="changePosterImage(this)">
+                                    <!-- <span class="ml-2 text-sm">Previous</span> -->
+                                </label>
+                                <label class="flex items-center whitespace-nowrap">
+                                    <input type="radio" name="poster-nav" value="upcoming" 
+                                          {{ $upcomingKegiatan ? 'checked' : 'disabled' }}
+                                          onchange="changePosterImage(this)">
+                                    <!-- <span class="ml-2 text-sm">Today/Upcoming</span> -->
+                                </label>
+                                <label class="flex items-center whitespace-nowrap">
+                                    <input type="radio" name="poster-nav" value="next" 
+                                          {{ $nextKegiatan ? '' : 'disabled' }}
+                                          onchange="changePosterImage(this)">
+                                    <!-- <span class="ml-2 text-sm">Next Upcoming</span> -->
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+              <div class="col-md-8 p-4">
+                <h3>Tentang Masjid Al-Bakrie</h3>
+                <h2>Sejarah Singkat</h2>
+                <p style="text-align: justify;">
+                  Masjid Al-Bakrie diresmikan pada tanggal 23 Februari 2004, dibangun di atas lahan milik Pemerintah Provinsi DKI Jakarta seluas 3.200 m². Diresmikan oleh Bapak Aburizal Bakrie bersama para tokoh dan masyarakat, masjid ini hadir sebagai pusat ibadah dan aktivitas sosial bagi warga sekitar dan lingkungan Bakrie Group.
+                  Dengan arsitektur yang terinspirasi dari gaya Masjid Medan dan prinsip desain islami, masjid ini memiliki luas bangunan 1.458 m² dan mampu menampung lebih dari 2.000 jamaah.
+                </p>
+
+                <div id="jadwalsholat" class="testimonials section dark-background">
+                  <video autoplay muted loop playsinline class="testimonials-bg">
+                    <source src="{{ asset('depan/vid/stars.mp4') }}" type="video/mp4">
+                    Browser kamu tidak mendukung tag video.
+                  </video>
+                  <div class="container text-white" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-md-8">
+                        <div class="swiper jadwalSholatSwiper text-center">
+                          <div class="calendar-info mb-0">
+                            <div id="kalender-masehi"></div>
+                            <div id="kalender-hijriyah"></div>
+                            <a id="kalender-link" href="{{ asset('depan/kalender/kalender-1447H.pdf') }}" class="glightbox" style="margin-top: 5px; display: inline-block;">Lihat Kalender Hijriyah</a>
+                            <div id="kalenderModal" class="glightbox-content" style="display: none;">
+                              <embed src="/depan/kalender/kalender-1447H.pdf" type="application/pdf" width="100%" height="600px">
+                            </div>
+                          </div>
+                          <div class="swiper-wrapper" id="jadwal-sholat-wrapper"></div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="text-center" id="lokasi-jadwal"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <script>
+                  document.addEventListener('DOMContentLoaded', () => {
+                    const link = document.getElementById('kalender-link');
+                    
+                    if (window.innerWidth > 768) {
+                      link.setAttribute('href', '#kalenderModal');
+                      link.classList.add('glightbox');
+                    } else {
+                      link.setAttribute('target', '_blank');
+                    }
+                  });
+                </script>
+
+            </div>
+          </div>
+          
+          <div class="col-xl-12">
             <div class="row gy-4 icon-boxes">
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
                   <i class="bi bi-binoculars"></i>
                   <h3>Visi</h3>
-                  <p class="small mb-2">
-                    Mewujudkan sarana ibadah dan pendidikan untuk meningkatkan ketaqwaan kepada Allah SWT serta memperkuat nilai-nilai ukhuwah Islamiyah.
+                  <p>
+                    Mewujudkan sarana ibadah dan pendidikan untuk meningkatkan ketaqwaan kepada Allah SWT serta memperkuat nilai-nilai ukhuwah Islamiyah. <br> Sesuai dengan Filosopi H. Achmad Bakrie bahwa setiap rupiah yang dihasilkan harus bermanfaat bagi orang banyak. Hal ini sejalan dengan Hadist Rasulullah SAW : “Sebaik-baik manusia adalah yang bermanfaat bagi orang lain”.
                   </p>
                 </div>
-              </div> <!-- End Icon Box -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box">
-                  <i class="bi bi-binoculars"></i>
-                  <!-- <h3>Visi</h3> -->
-                  <p class="small mb-2">
-                    Sesuai dengan Filosopi H. Achmad Bakrie bahwa setiap rupiah yang dihasilkan harus bermanfaat bagi orang banyak. Hal ini sejalan dengan Hadist Rasulullah SAW : “Sebaik-baik manusia adalah yang bermanfaat bagi orang lain”.
-                  </p>
-                </div>
-              </div> <!-- End Icon Box -->
+              </div> 
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box">
                   <i class="bi bi-list-check"></i>
                   <h3>Misi</h3>
-                  <p>Membina, memupuk serta menumbuh kembangkan ukhuwah Islamiyah dan rasa persaudaraaan menuju persatuan dan kesatuan nasional antar pribadi, keluarga dan masyarakat pada umumnya.</p>
+                  <p>Membina, memupuk serta menumbuh kembangkan ukhuwah Islamiyah dan rasa persaudaraaan menuju persatuan dan kesatuan nasional antar pribadi, keluarga dan masyarakat pada umumnya.<br> Menumbuhkan keimanan, ketakwaan, dan akhlakul karimah terutama bagi anak-anak dan generasi muda melalui dakwah, syiar Islam, serta amar ma’ruf nahi munkar.Memberikan pelayanan agama, pendidikan, dan sosial bagi masyarakat, khususnya yang kurang mampu.</p>
                 </div>
-              </div> <!-- End Icon Box -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon-box">
-                  <i class="bi bi-list-check"></i>
-                  <!-- <h3>Misi</h3> -->
-                  <p>Menumbuhkan keimanan, ketakwaan, dan akhlakul karimah terutama bagi anak-anak dan generasi muda melalui dakwah, syiar Islam, serta amar ma’ruf nahi munkar.Memberikan pelayanan agama, pendidikan, dan sosial bagi masyarakat, khususnya yang kurang mampu.</p>
-                </div>
-              </div> <!-- End Icon Box -->
+              </div> 
 
             </div>
           </div>
 
         </div>
       </div>
-
     </section><!-- /Tentang Section -->
+
+
+    <!-- JADWAL KEGIATAN MASJID -->
+    <section id="kegiatan" class="light-background" style="padding: 40px 10px;">
+      <div style="max-width: 800px; margin: auto; text-align: center;">
+        <h2 style="margin-bottom: 20px;">Kegiatan Masjid</h2>
+
+        <!-- Navigasi Minggu -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+          <button id="prev-week" style="padding: 8px; background: #085C44; color: white; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+              <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+          </button>
+          <span id="week-range" style="font-weight: bold;"></span>
+          <button id="next-week" style="padding: 8px; background: #085C44; color: white; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+              <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Tabel Jadwal -->
+        <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+          <thead style="background: #085C44; color: white;">
+            <tr>
+              <th style="padding: 10px;">Tanggal</th>
+              <th style="padding: 10px;">Hari</th>
+              <th style="padding: 10px;">Waktu</th>
+              <th style="padding: 10px;">Kegiatan</th>
+              <th style="padding: 10px;">Pengisi</th>
+            </tr>
+          </thead>
+          <tbody id="jadwal-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <script>
+      // Data jadwal dari backend (Laravel -> JSON)
+      const jadwalMingguan = @json($jadwal);
+
+      let currentDate = new Date();
+      let currentWeekStart = getStartOfWeek(currentDate);
+
+      function getStartOfWeek(date) {
+        const d = new Date(date);
+        const day = d.getDay();
+        const diff = d.getDate() - day + (day === 0 ? -6 : 1); 
+        return new Date(d.setDate(diff));
+      }
+
+      function getEndOfWeek(startDate) {
+        const d = new Date(startDate);
+        d.setDate(d.getDate() + 6);
+        return d;
+      }
+
+      function formatIndoDate(date) {
+        return date.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+      }
+
+      function renderTable() {
+        const start = currentWeekStart;
+        const end = getEndOfWeek(start);
+
+        document.getElementById('week-range').textContent =
+          `${formatIndoDate(start)} - ${formatIndoDate(end)}`;
+
+        const filtered = jadwalMingguan.filter(item => {
+          const tgl = new Date(item.tanggal);
+          return tgl >= start && tgl <= end;
+        });
+
+        const tbody = document.getElementById('jadwal-body');
+        tbody.innerHTML = '';
+
+        if (filtered.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="5" style="padding: 10px;">Tidak ada jadwal pada minggu ini</td></tr>`;
+          return;
+        }
+
+        filtered.forEach(item => {
+          tbody.innerHTML += `
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #ddd;">${formatIndoDate(new Date(item.tanggal))}</td>
+              <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.hari}</td>
+              <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.waktu}</td>
+              <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.kegiatan}</td>
+              <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.pengisi}</td>
+            </tr>
+          `;
+        });
+      }
+
+      document.getElementById('prev-week').addEventListener('click', () => {
+        currentWeekStart.setDate(currentWeekStart.getDate() - 7);
+        renderTable();
+      });
+
+      document.getElementById('next-week').addEventListener('click', () => {
+        currentWeekStart.setDate(currentWeekStart.getDate() + 7);
+        renderTable();
+      });
+
+      renderTable();
+    </script>
+
+
+
 
     <!-- Fasilitas Section -->
     <section id="fasilitas" class="features section">
@@ -258,17 +436,17 @@
       </div>
     </section><!-- /Fasilitas Section -->
 
-<!-- Kegiatan Section -->
-  <section id="kegiatan" class="stats section light-background">
+<!-- Rutinitas an Section -->
+  <section id="rutinitas" class="stats section light-background">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h1 class="text-center mb-5">Kegiatan Masjid</h1>
+        <h1 class="text-center mb-5">Rutinitas Masjid</h1>
         <div class="row gy-4 floating d-flex">
 
         <div class="col-lg-4 col-md-6 d-flex h-100 flex-column align-items-center">
           <!-- <div class="stats-item text-start mt-2"> -->
           <div class="stats-item text-start mt-2 w-100" style="min-height: 100%; padding: 20px; background-color: #fdfdfd; border-radius: 10px;">
-            <p class="mb-2"><strong>Kegiatan Hari Besar Islam:</strong></p>
+            <p class="mb-2"><strong>Rutinitas Hari Besar Islam:</strong></p>
             <p class="mb-2"><span class="iconify" data-icon="line-md:moon-rising-twotone-loop" data-width="20" data-height="20" style="color:#091c3a;"></span> Tahun Baru Islam (1 Muharram)</p>
             <p class="mb-2"><span class="iconify" data-icon="line-md:moon-rising-twotone-loop" data-width="20" data-height="20" style="color:#091c3a;"></span> Maulid Nabi Muhammad SAW</p>
             <p class="mb-2"><span class="iconify" data-icon="line-md:moon-rising-twotone-loop" data-width="20" data-height="20" style="color:#091c3a;"></span> Isra' Mi'raj Nabi Muhammad SAW</p>
@@ -282,7 +460,7 @@
 
         <div class="col-lg-4 col-md-6 d-flex h-100 flex-column align-items-center">
           <div class="stats-item text-start mt-2 w-100" style="min-height: 100%; padding: 20px; background-color: #fdfdfd; border-radius: 10px;">
-            <p class="mb-2"><strong>Kegiatan Bulan Ramadhan:</strong></p>
+            <p class="mb-2"><strong>Rutinitas Bulan Ramadhan:</strong></p>
             <p class="mb-2"><span class="iconify" data-icon="line-md:moon-rising-twotone-loop" data-width="20" data-height="20" style="color:#091c3a;"></span> Ta’jil & buka puasa bersama</p>
             <p class="mb-2"><span class="iconify" data-icon="line-md:moon-rising-twotone-loop" data-width="20" data-height="20" style="color:#091c3a;"></span> Sholat Tarawih & Tausiyah</p>
             <p class="mb-2"><span class="iconify" data-icon="line-md:moon-rising-twotone-loop" data-width="20" data-height="20" style="color:#091c3a;"></span> Tadarus Al-Qur’an</p>
@@ -296,7 +474,7 @@
 
         <div class="col-lg-4 col-md-6 d-flex h-100 flex-column align-items-center">
           <div class="stats-item text-start mt-2 w-100" style="min-height: 100%; padding: 20px; background-color: #fdfdfd; border-radius: 10px;">
-            <p class="mb-2"><strong>Kegiatan Sosial:</strong></p>
+            <p class="mb-2"><strong>Rutinitas Sosial:</strong></p>
             <p class="mb-2"><span class="iconify" data-icon="line-md:moon-rising-twotone-loop" data-width="20" data-height="20" style="color:#091c3a;"></span> Santunan Yatim Piatu & Dhuafa</p>
             <p class="mb-2"><span class="iconify" data-icon="line-md:moon-rising-twotone-loop" data-width="20" data-height="20" style="color:#091c3a;"></span> Sembako Murah</p>
             <p class="mb-2"><span class="iconify" data-icon="line-md:moon-rising-twotone-loop" data-width="20" data-height="20" style="color:#091c3a;"></span> Pemeriksaan Kesehatan Gratis</p>
@@ -380,22 +558,9 @@
     </div>
   </section>
 
-<!-- JADWAL SHOLAT SECTION -->
-  <section id="jadwalsholat" class="testimonials section dark-background">
-    <video autoplay muted loop playsinline class="testimonials-bg">
-      <source src="{{ asset('depan/vid/stars.mp4') }}" type="video/mp4">
-      Browser kamu tidak mendukung tag video.
-    </video>
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="swiper jadwalSholatSwiper">
-        <div class="swiper-wrapper" id="jadwal-sholat-wrapper">
-          <!-- Slide akan dimasukkan lewat JS -->
-        </div>
-        <div class="swiper-pagination"></div>
-        </div>
-      <div class="text-center text-white mt-2" id="lokasi-jadwal"></div>
-    </div>
-  </section>
+
+
+
 
 <!-- Faq Section -->
     <section id="faq" class="faq section light-background">
@@ -624,6 +789,30 @@
   <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+  <!-- POSTER -->
+  <script>
+      function changePosterImage(radio) {
+          const imageElement = document.getElementById('poster-image');
+          const images = {
+              previous: {
+                  src: '{{ $previousKegiatan && $previousKegiatan->gambar ? asset('storage/' . $previousKegiatan->gambar) : '' }}',
+                  alt: '{{ $previousKegiatan ? $previousKegiatan->kegiatan : '' }}'
+              },
+              upcoming: {
+                  src: '{{ $upcomingKegiatan && $upcomingKegiatan->gambar ? asset('storage/' . $upcomingKegiatan->gambar) : asset('depan/img/poster-masjid.jpeg') }}',
+                  alt: '{{ $upcomingKegiatan ? $upcomingKegiatan->kegiatan : 'Poster Masjid Al-Bakrie' }}'
+              },
+              next: {
+                  src: '{{ $nextKegiatan && $nextKegiatan->gambar ? asset('storage/' . $nextKegiatan->gambar) : '' }}',
+                  alt: '{{ $nextKegiatan ? $nextKegiatan->kegiatan : '' }}'
+              }
+          };
+
+          const selected = images[radio.value];
+          imageElement.src = selected.src || '{{ asset('depan/img/poster-masjid.jpeg') }}';
+          imageElement.alt = selected.alt || 'Poster Masjid Al-Bakrie';
+      }
+  </script>
 
   </body>
 </html>
