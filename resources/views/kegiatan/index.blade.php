@@ -62,13 +62,22 @@
                           <td class="px-4 py-2 border">{{ $item->waktu }}</td>
                           <td class="px-4 py-2 border">{{ $item->kegiatan }}</td>
                           <td class="px-4 py-2 border">{{ $item->pengisi }}</td>
-                           <td class="px-4 py-2 border text-center">
+                          <!-- <td class="px-4 py-2 border text-center glightbox">
                                 @if ($item->gambar)
                                     <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->kegiatan }}" class="w-16 h-16 object-cover rounded">
                                 @else
                                     <span class="text-gray-500">No Image</span>
                                 @endif
-                            </td>
+                          </td> -->
+                          <td class="px-4 py-2 border text-center">
+                              @if ($item->gambar)
+                                  <a href="{{ asset('storage/' . $item->gambar) }}" class="glightbox cursor-pointer">
+                                      <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->kegiatan }}" class="w-16 h-16 object-cover rounded">
+                                  </a>
+                              @else
+                                  <span class="text-gray-500">No Image</span>
+                              @endif
+                          </td>
                           <td class="px-4 py-2 border text-center">
                               <div class="flex items-center justify-center space-x-2">
                                   <a href="{{ route('kegiatan.edit', $item->id) }}" 
@@ -100,4 +109,18 @@
       </div>
     </div>
   </div>
+
+   @push('scripts')
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
+  @endpush
+
+  @push('styles')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  @endpush
+  
 </x-app-layout>
